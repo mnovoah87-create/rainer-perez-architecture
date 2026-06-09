@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #1a1714;
+  --paper: #f5f2ec;
+  --warm: #c8b89a;
+  --accent: #8b6f4e;
+  --muted: #7a7268;
+  --light: #e8e2d8;
+  --white: #faf8f4;
+  --darkbg: #141210;
+  --darkcard: #1e1b18;
+
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --mono: 'DM Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: var(--serif);
+  cursor: pointer;
+}
+
+input, textarea {
+  font-family: var(--serif);
+}
+
+/* Leaflet map overrides */
+.leaflet-popup-content-wrapper {
+  background: var(--ink) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  color: var(--paper) !important;
+  font-family: var(--serif) !important;
+}
+
+.leaflet-popup-tip {
+  background: var(--ink) !important;
+}
+
+.leaflet-popup-close-button {
+  color: var(--warm) !important;
+  font-size: 18px !important;
+  top: 8px !important;
+  right: 8px !important;
+}
+
+.map-popup {
+  padding: 1.25rem 1.5rem;
+  min-width: 220px;
+}
+
+.map-popup-tag {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--warm);
+  margin-bottom: 0.4rem;
+}
+
+.map-popup-title {
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--paper);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.map-popup-loc {
+  font-size: 0.82rem;
+  color: rgba(245, 242, 236, 0.55);
+  font-weight: 300;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Fade-in animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}
