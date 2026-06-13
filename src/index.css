@@ -11,7 +11,7 @@
   --paper: #f5f2ec;
   --warm: #c8b89a;
   --accent: #8b6f4e;
-  --muted: #7a7268;
+  --muted: #2e2b28;       /* was #7a7268 — darker for better readability */
   --light: #e8e2d8;
   --white: #faf8f4;
   --darkbg: #141210;
@@ -42,6 +42,13 @@ button {
 
 input, textarea {
   font-family: var(--serif);
+  color: var(--ink);
+}
+
+/* Placeholders */
+::placeholder {
+  color: #8a8078;
+  opacity: 1;
 }
 
 /* Leaflet map overrides */

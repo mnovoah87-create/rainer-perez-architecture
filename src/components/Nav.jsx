@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-const SECTIONS = ["home", "about", "work", "services", "process", "south-florida", "contact"];
+const SECTIONS = ["home", "work", "services", "process", "south-florida", "contact", "about"];
 const LABELS = {
   home: "Home",
-  about: "About",
   work: "Work",
   services: "Services",
   process: "Process",
-  "south-florida": "South Florida",
+  "south-florida": "Where We Build",
   contact: "Contact",
+  about: "About"
 };
 
 export default function Nav({ section, onNav }) {
